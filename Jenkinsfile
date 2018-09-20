@@ -20,22 +20,22 @@ pipeline {
         }
         stage('Controls') {
           steps {
-            sh 'test'
+            echo 'test'
           }
         }
         stage('Attrbutes') {
           steps {
-            sh 'test'
+            echo 'test'
           }
         }
         stage('ReadMe') {
           steps {
-            sh 'test'
+            echo 'test'
           }
         }
         stage('Libraries') {
           steps {
-            sh 'test'
+            echo 'test'
           }
         }
       }
@@ -44,12 +44,12 @@ pipeline {
       parallel {
         stage('Syntax Check') {
           steps {
-            sh 'test'
+            echo 'test'
           }
         }
         stage('inspec check') {
           steps {
-            sh 'test'
+            echo 'test'
           }
         }
       }
@@ -58,48 +58,48 @@ pipeline {
       parallel {
         stage('Lint Check') {
           steps {
-            sh 'test'
+            echo 'test'
           }
         }
         stage('Rubocop') {
           steps {
-            sh 'Test'
+            echo 'Test'
           }
         }
       }
     }
     stage('Code Review') {
       steps {
-        sh 'Test'
+        echo 'Test'
       }
     }
     stage('Produce Archive') {
       parallel {
         stage('Produce Archive') {
           steps {
-            sh 'test'
+            echo 'test'
           }
         }
         stage('Produce zip/tarball archive') {
           steps {
-            sh 'test'
+            echo 'test'
           }
         }
         stage('Produce a Signed Artifact') {
           steps {
-            sh 'test'
+            echo 'test'
           }
         }
       }
     }
     stage('Publish Archive/Lock') {
       steps {
-        sh 'test'
+        echo 'test'
       }
     }
     stage('Commit to Master') {
       steps {
-        sh 'test'
+        echo 'test'
       }
     }
   }
