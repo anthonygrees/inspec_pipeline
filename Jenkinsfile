@@ -3,19 +3,19 @@ pipeline {
   stages {
     stage('Create PR') {
       steps {
-        sh 'test'
+        echo 'Create PR'
       }
     }
     stage('InSpec Profile') {
       parallel {
         stage('InSpec Profile') {
           steps {
-            sh 'test'
+            echo 'InSpec Profile'
           }
         }
         stage('Inspec.yml') {
           steps {
-            sh 'test'
+            echo 'Test'
           }
         }
         stage('Controls') {
